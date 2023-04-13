@@ -59,3 +59,114 @@ img {
 }
 
 /* ======================================================================= */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-blue);
+    height: 100vh;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+header {
+    text-align: center;
+    color: var(--whitesmoke);
+    padding-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1;
+}
+
+header h1 span {
+    font-weight: 700;
+
+}
+
+section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+form button {
+    outline: none;
+    border: 1px solid var(--whitesmoke);
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    background-color: transparent;
+    color: var(--whitesmoke);
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: all .3s;
+    cursor: pointer;
+
+}
+
+form button:hover {
+    background-color: var(--color-sec);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+
+.modal-content {
+    width: 80%;
+    max-width: 60rem;
+    background-color: #eee;
+    margin: 15% auto;
+    padding: 2rem;
+    color: #000;
+    border: 1px solid #777;
+    text-align: center;
+    animation: slide ease .8s;
+
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(-30);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.close{
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    color: var(--color-primary);
+    font-size: 2rem;
+    cursor: pointer;
+}
+.slide-up{
+animation: slide-up ease .8s;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50rem);
+    }
+}
