@@ -1,0 +1,103 @@
+/* ======================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 62.5% of 16px = 10px */
+    /* set 1rem = 10px using 62.5% of 16px 
+    1rem = 10px
+    1.5rem = 15px
+    3rem = 30px
+    6rem = 60px
+    .1rem = 1px
+     */
+}
+
+body {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+/* ======================================================================= */
+
+/* ====================JAVASCRIPT PROJECT STYLES========================== */
+:root {
+    --white: #fff;
+    --whitesmoke: #f5f5f5;
+    --black: #1c2b2d;
+    --blue: #31326f;
+    --light-blue: #005490;
+    --color-primary: #9d0191;
+    --color-sec: #db6400;
+    --grey: #eee;
+    --dark-grey: #222831;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ======================================================================= */
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pal {
+    width: 40rem;
+    background: var(--whitesmoke);
+    padding: 5rem 3rem;
+    border-radius: 0.5rem;
+}
+
+input {
+    width: 70%;
+    border: none;
+    outline: none;
+    padding: 1rem 0.5rem;
+    border-bottom: .2rem solid var(--color-sec);
+    font-size: 1.6rem;
+}
+
+button {
+    width: 25%;
+    padding: 1rem 0.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+    color: var(--white);
+    background: var(--color-primary);
+
+}
+p.result{
+    color: #000;
+    margin-top: 3.5rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--dark-grey);
+}
