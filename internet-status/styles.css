@@ -59,3 +59,62 @@ img {
 }
 
 /* ======================================================================= */
+.p-small {
+    padding-bottom: 0.5rem;
+}
+
+.p-medium {
+    padding-bottom: 1rem;
+}
+
+.p-y {
+    padding-bottom: 1rem 0;
+}
+
+.m-y {
+    padding-bottom: 1rem 0;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+}
+
+
+
+.container {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    background-color: var(--black);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.online {
+    background-color: var(--light-blue);
+}
+
+section img {
+    width: 25%;
+    border-radius: 10rem;
+}
+
+section h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+section p {
+    font-size: 2rem;
+}
