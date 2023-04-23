@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>Random Quote Generator</title>
 
     <!--==============================================================-->
     <!-- <link rel="stylesheet" href="../normalize.css" /> -->
@@ -12,12 +12,28 @@
     <script
       src="https://kit.fontawesome.com/1935d064dd.js"
       crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
     <!--==============================================================-->
 
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <script src="script.js"></script>
+    <div class="container">
+      <h2>Random Quote Generator</h2>
+      <form action="">
+        <div class="">
+          <label for="number">Number of Quotes</label>
+          <input type="number" id="number" />
+        </div>
+        <button class="get-quotes">Get Quotes</button>
+      </form>
+      <hr />
+      <ul class="quotes"></ul>
+    </div>
+    <!-- <script src="ajax.js"></script> -->
+    <script src="fetch.js"></script>
   </body>
 </html>
