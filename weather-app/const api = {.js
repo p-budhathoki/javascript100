@@ -1,20 +1,14 @@
 const api = {
-  key: "120457b125cf54e45e68447d52f4c909",
+  key: "28fd15358cdecbc1a1dfef367e71acef",
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
-// get input, button
 const search = document.querySelector(".search");
 const btn = document.querySelector(".btn");
-
-// add event listener
 btn.addEventListener("click", getInput);
 
-// get input function
 function getInput(event) {
   event.preventDefault();
-
-  // incase of click event get the data
   if (event.type == "click") {
     getData(search.value);
     console.log(search.value);
@@ -30,10 +24,10 @@ function getData() {
 }
 
 function displayData(response) {
-  console.log(response);
+  // console.log(response);
   if (response.cod === "404") {
     const error = document.querySelector(".error");
-    error.textContent = "Please enter a Vaid City";
+    error.textContent = "Please enter a valid city";
     search.value = "";
   } else {
     const city = document.querySelector(".city");
@@ -44,19 +38,19 @@ function displayData(response) {
     date.innerText = dateFunction(today);
 
     const temp = document.querySelector(".temp");
-    temp.innerHTML = `Temp : ${Math.round(response.main.temp)} <span>°C</span>`;
+    temp.innerHTML = `Temp: ${Math.round(response.main.temp)} <span>°C</span>`;
 
     const weather = document.querySelector(".weather");
-    weather.innerText = `Weather : ${response.weather[0].main}`;
+    weather.innerText = `Weather: ${response.weather[0].main}`;
 
     const tempRange = document.querySelector(".temp-range");
-    tempRange.innerText = `Temp Range : ${Math.round(
+    tempRange.innerText = `Temp Range: ${Math.round(
       response.main.temp_min
     )}°C / ${Math.round(response.main.temp_max)}°C`;
 
     const weatherIcon = document.querySelector(".weather-icon");
-    const iconUrl = "http://openweathermap.org/img/w/";
-    weatherIcon.src = iconUrl + response.weather[0].icon + ".png";
+    const iconURL = "http://openweathermap.org/img/w/";
+    weatherIcon.src = iconURL + response.weather[0].icon + ".png";
 
     search.value = "";
   }
@@ -67,11 +61,10 @@ function dateFunction(d) {
     "Jan",
     "Feb",
     "Mar",
-    "Mar",
     "Apr",
     "May",
-    "Jun",
-    "Jul",
+    "June",
+    "July",
     "Aug",
     "Sep",
     "Oct",
@@ -93,5 +86,5 @@ function dateFunction(d) {
   let month = months[d.getMonth()];
   let year = d.getFullYear();
 
-  return `${day}, ${date}, ${month},${year}`;
+  return `${day}, ${date} ${month} ${year}`;
 }
