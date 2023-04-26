@@ -17,6 +17,7 @@ html {
     6rem = 60px
     .1rem = 1px
      */
+    scroll-behavior: smooth;
 }
 
 body {
