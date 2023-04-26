@@ -59,3 +59,38 @@ img {
 }
 
 /* ======================================================================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100rem;
+    background: url(./images/bg.png) no-repeat;
+    background-size: cover;
+z-index: 1;
+    position: relative;
+}
+
+h1 {
+    background-color: rgba(0, 0, 0, .3);
+    font-size: 5.5rem;
+    /* color: #000; */
+    line-height: 2;
+    position: fixed;
+    top: 20rem;
+    /* color: #000; */
+
+    
+
+}
+
+
+.countdown {
+    background-color: rgba(0, 0, 0, .4);
+    padding: 2rem;
+    font-size: 4.5rem;
+    border-radius: 0.5rem;
+    position: fixed;
+    top: 29rem;
+}
