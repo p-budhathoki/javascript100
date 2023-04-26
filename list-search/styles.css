@@ -59,3 +59,34 @@ img {
 }
 
 /* ======================================================================= */
+.container {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 10rem 1rem 0rem 1rem;
+    font-size: 2rem;
+}
+
+#search {
+    width: 100%;
+    font-size: 1.8rem;
+    padding: 1.2rem 2rem;
+    border: 1px solid #ddd;
+    margin-bottom: 1.2rem;
+    outline: none;
+}
+
+#list {
+    list-style-type: none;
+}
+
+#list li {
+    border: 1px solid #ddd;
+    padding: 1.2rem;
+    background-color: var(--whitesmoke);
+    color: #000;
+    display: block;
+}
+
+#list li:hover {
+    background-color: #eee;
+}
