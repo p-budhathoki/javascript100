@@ -11,7 +11,7 @@ const c = setInterval(() => {
   const seconds = Math.floor(totalSeconds) % 60;
 
   const countDown = document.getElementById("countdown");
-  countDown.textContent = `${days} Days ${format(hours)} Hrs : ${format(minutes)} Min :  ${format(seconds)}s}`;
+  countDown.textContent = `${days} Days ${format(hours)} Hrs : ${format(minutes)} Min :  ${format(seconds)}s`;
 
   if ((totalSeconds < 0)) {
     clearInterval(c);
