@@ -63,6 +63,9 @@ img {
 header {
     width: 100%;
     background-color: var(--dark-grey);
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 nav {
@@ -117,4 +120,24 @@ h2 {
 
 .flex>* {
     margin: 0.3rem;
+}
+
+.active {
+    position: relative;
+
+}
+
+.active > * {
+    color: var(--color-sec);
+}
+
+.active::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -0.5rem;
+    height: 0.2rem;
+    width: 100%;
+    background-color: var(--whitesmoke);
+    /* background-color: red; */
 }

@@ -14,3 +14,18 @@ function smoothScroll(e) {
     behavior: "smooth",
   });
 }
+
+// active menu switcher
+// select the list
+const navList = document.querySelector(".nav-list");
+
+navList.addEventListener("click", (e) => { 
+  const navLink = e.target.parentElement;
+
+  if (navLink.classList.contains("link")) {
+    // remove active class from the list
+    navList.querySelector(".active").classList.remove("active");
+    // add the active class to the current list that is clicked
+    navLink.classList.add("active");
+  }
+ })
