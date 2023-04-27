@@ -127,7 +127,7 @@ h2 {
 
 }
 
-.active > * {
+.active>* {
     color: var(--color-sec);
 }
 
@@ -140,4 +140,25 @@ h2 {
     width: 100%;
     background-color: var(--whitesmoke);
     /* background-color: red; */
+}
+
+.top {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background-color: transparent;
+    padding: 1rem;
+    border: .1rem solid var(--color-sec);
+    outline: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 200;
+    transform: translateY(10rem);
+    transition: all .3s;
+    opacity: 0;
+}
+
+.show-btn {
+    opacity: 1;
+    transform: translateY(0);
 }
