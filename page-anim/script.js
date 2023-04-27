@@ -54,3 +54,7 @@ function scrollToTop() {
     behavior: "smooth",
   });
 }
+
+AOS.init({
+  duration:1000,
+})
