@@ -70,6 +70,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -117,4 +118,51 @@ h2 {
 
 .flex>* {
     margin: 0.3rem;
+}
+
+@media screen and (max-width: 600px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    nav i {
+        font-size: 2.4rem;
+        cursor: pointer;
+    }
+
+    .close {
+        position: absolute;
+        right: 3rem;
+        transform: translateY(-20rem);
+        transition: all .3s;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        padding: 2rem 0;
+        margin-top: 1.5rem;
+        background-color: rgba(0, 0, 0, .4);
+        border-radius: 0.3rem;
+        z-index: 999;
+        transform: translateY(-200%);
+        transition: all .5s;
+    }
+
+    .nav-list li{
+        width: 80%;
+        padding: 0.5rem 0;
+        font-size: 1.6rem;
+        border-bottom: .1rem solid var(--whitesmoke);
+        text-align: center;
+
+    }
+    .nav-list li:first-child{
+        border-top: .1rem solid var(--whitesmoke);
+    }
+    .nav-list li a:hover{
+        color: var(--color-sec);
+    }
+
 }
