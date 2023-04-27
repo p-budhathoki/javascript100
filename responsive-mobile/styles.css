@@ -120,6 +120,11 @@ h2 {
     margin: 0.3rem;
 }
 
+/* hide submenu */
+.submenu-three {
+    display: none;
+}
+
 @media screen and (max-width: 600px) {
     .flex {
         flex-direction: column;
@@ -135,9 +140,14 @@ h2 {
         right: 3rem;
         transform: translateY(-20rem);
         transition: all .3s;
+        z-index: 11;
     }
 
-    .nav-list {
+    .hamburger {
+        z-index: 11;
+    }
+
+    /* .nav-list{
         flex-direction: column;
         width: 90%;
         margin: 0 auto;
@@ -148,9 +158,49 @@ h2 {
         z-index: 999;
         transform: translateY(-200%);
         transition: all .5s;
+    } */
+
+    .nav-list, .nav-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        display: block;
+        background-color: rgba(0, 0, 0, .7);
+        padding-top: 2rem;
+        transform: translateX(200%);
+        transition: all .5s;
     }
 
-    .nav-list li{
+    .nav-list {
+        z-index: 1;
+    }
+
+    .nav-wrapper {
+        width: 100%;
+        transform: translateX(-200%);
+    }
+
+    .nav-list li {
+        border-bottom: 1px solid var(--whitesmoke);
+        padding: 0.7rem 0rem 0.7rem 1rem;
+    }
+
+    .nav-list li a {
+        /* padding: 0.7rem 0rem 0.7rem 1rem; */
+        /* margin: 1rem; */
+        color: var(--whitesmoke);
+        transition: all .3s;
+
+    }
+
+    .nav-list li a:hover {
+        color: var(--color-sec);
+        margin-left: 1rem;
+    }
+
+    /* .nav-list li {
         width: 80%;
         padding: 0.5rem 0;
         font-size: 1.6rem;
@@ -158,11 +208,49 @@ h2 {
         text-align: center;
 
     }
-    .nav-list li:first-child{
+
+    .nav-list li:first-child {
         border-top: .1rem solid var(--whitesmoke);
     }
-    .nav-list li a:hover{
+
+    .nav-list li a:hover {
+        color: var(--color-sec);
+    } */
+
+
+    /* submenu css */
+    .three {
+        position: relative;
+    }
+
+    .fa-angle-right {
+        position: absolute;
+        top: 50%;
+        right: 0.5rem;
+        font-size: 2rem;
+        transform: translateY(-50%);
+    }
+
+    .nav-list li a {
+        display: block;
+    }
+
+    .nav-list li a:hover~.fa-angle-right {
         color: var(--color-sec);
     }
 
+    .submenu-three {
+        transform: translateX(-100%);
+        transition: all .5s;
+    }
+
+    .submenu-three .back {
+        display: flex;
+    }
+
+    .fa-arrow-left {
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+        color: var(--color-sec);
+    }
 }
