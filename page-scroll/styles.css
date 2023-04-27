@@ -69,7 +69,7 @@ header {
     padding: 2rem 0;
     z-index: 111;
     transition: all .5s;
-    
+
 }
 
 header.sticky {
@@ -143,4 +143,50 @@ h2 {
 
 .flex>* {
     margin: 0.3rem;
+}
+
+@media screen and (max-width:600px) {
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* scroll indicator */
+.scroll-indicator {
+    width: 100%;
+    height: 0.3rem;
+    background: var(--grey);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    /* visibility: hidden; */
+}
+
+.progress {
+    width: 0%;
+    height: 0.3rem;
+    background-color: var(--color-sec);
+}
+
+/* NewsLetter Section */
+.newsletter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: var(--whitesmoke);
+    border: .2rem solid var(--color-primary);
+    padding: 2rem 3rem;
+    transform: translateX(-100%);
+    transition: all .5s;
+color: #000;
+}
+.fa-times{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.4rem;
+    color: red
+    ;
 }
