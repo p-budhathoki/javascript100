@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>To Do List</title>
 
     <!--==============================================================-->
     <!-- <link rel="stylesheet" href="../normalize.css" /> -->
@@ -18,6 +18,37 @@
   </head>
 
   <body>
-    <script src="script.js"></script>
+    <section>
+      <div class="container">
+        <div class="add-item">
+          <form action="" onsubmit="return false">
+            <input type="text" placeholder="Add a Task" />
+            <button>Add</button>
+          </form>
+        </div>
+        <h2>List of Tasks to Do</h2>
+        <hr />
+        <ol class="todo-list">
+          <li>
+            Task 1<button><i class="fas fa-trash-alt"></i></button>
+          </li>
+          <!--
+            <li>
+              Task 2<button><i class="fas fa-trash-alt"></i></button>
+            </li>
+            <li>
+              Task 3<button><i class="fas fa-trash-alt"></i></button>
+            </li>
+            <li>
+              Task 4<button><i class="fas fa-trash-alt"></i></button>
+            </li> -->
+        </ol>
+        <hr />
+        <button class="clear">Clear Task</button>
+      </div>
+    </section>
+    <!-- <script src="script.js"></script> -->
+    <script src="app.js"></script>
+    <!-- <script src="app1.js"></script> -->
   </body>
 </html>

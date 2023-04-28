@@ -60,3 +60,110 @@ img {
 }
 
 /* ======================================================================= */
+section {
+    width: 100%;
+    padding: 0rem 3rem;
+}
+
+.container {
+    max-width: 60rem;
+    margin: 5rem auto;
+}
+
+.add-item {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5rem 0;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+}
+
+.add-item form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-item form input {
+    padding: 1rem 1.5rem;
+    font-size: 1.8rem;
+    color: var(--whitesmoke);
+    width: 75%;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    outline: none;
+    background-color: transparent;
+    margin-right: 0.5rem;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+form button {
+    width: 15%;
+    font-size: 1.6rem;
+    margin-left: 1.5rem;
+    border: .1rem solid transparent;
+    border-radius: 0.5rem;
+    background-color: var(--color-sec);
+    /* color: var(--grey); */
+    padding: 1rem;
+    cursor: pointer;
+}
+
+/* for javascript */
+.button-click {
+    font-size: 1.8rem;
+    color: #000;
+
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+ol li {
+    font-size: 1.6rem;
+    margin: 0.7rem 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: relative;
+    /* border: 1px solid green; */
+}
+
+ol li:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+li button {
+    font-size: 1.6rem;
+    /* color: red; */
+    color: var(--whitesmoke);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    right: .1rem;
+    top: -.2rem;
+    /* border: 1px solid red; */
+    padding: 1rem 3rem 1rem 3rem;
+
+}
+
+hr {
+    margin: 1.5rem 0;
+    /* border: 1px solid red; */
+}
+
+.clear {
+    padding: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.clear:hover {
+    font-size: 1.5rem;
+}
