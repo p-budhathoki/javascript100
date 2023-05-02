@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>BMI Calculator</title>
 
     <!--==============================================================-->
     <!-- <link rel="stylesheet" href="../normalize.css" /> -->
@@ -18,6 +18,25 @@
   </head>
 
   <body>
+    <section>
+      <div class="container box">
+        <h1>BMI Calculator</h1>
+        <hr />
+        <form action="">
+          <div>
+            <label for="">Height in cm</label>
+            <input type="text" class="height" />
+          </div>
+          <div>
+            <label for="">Weight in Kgs</label>
+            <input type="text" class="weight" />
+          </div>
+          <button class="btn">Calculate</button>
+        </form>
+        <p class="result">Normal : 24</p>
+        <button class="reset">Reset</button>
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>

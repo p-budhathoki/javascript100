@@ -60,3 +60,57 @@ img {
 }
 
 /* ======================================================================= */
+
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box{
+    width: 40rem;
+    background-color: var(--light-blue);
+    padding: 2rem;
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+}
+
+form{
+    padding: 1rem 0rem;
+    font-size: 1.6rem;
+
+}
+form >*{
+    padding-bottom: 1rem;
+}
+form input, .btn{
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+.btn{
+    /* font-size: 1.6rem; */
+    background-color: var(--color-sec);
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+}
+.result{
+    padding: 1rem;
+/* display: none; */
+}
+
+
+.reset{
+padding: 1rem;
+margin: 0.5rem 0;
+display: none;
+cursor: pointer;
+}
