@@ -60,3 +60,113 @@ img {
 }
 
 /* ======================================================================= */
+.hero-boy {
+    width: 5rem;
+    height: 5rem;
+}
+
+.vilian-wolf {
+    width: 5rem;
+    height: 5rem;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #222831;
+    color: var(--whitesmoke);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.container {
+    background: url(./images/forest1.gif)center no-repeat;
+    position: relative;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, .4);
+}
+
+.game {
+    width: 50rem;
+    height: 20rem;
+    margin: auto;
+    border-bottom: .3rem solid var(--whitesmoke);
+}
+
+.hero {
+    width: 2rem;
+    height: 5rem;
+    position: relative;
+    top: 15rem;
+    left: 2rem;
+    z-index: 1;
+}
+
+.vilian {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    top: 11.5rem;
+    left: 45rem;
+    z-index: 1;
+    /* animation: move 1s infinite linear; */
+}
+
+.animate {
+    animation: jump .3s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: 15rem;
+    }
+
+    30% {
+        top: 10rem;
+        transform: rotate(45deg)
+    }
+
+    50% {
+        top: 6rem;
+        transform: rotate(90deg)
+    }
+
+    75% {
+        top: 10rem;
+        transform: rotate(180deg)
+    }
+
+    100% {
+        top: 15rem;
+        transform: rotate(360deg)
+    }
+}
+
+.move {
+    /* animation: jump .3s linear; */
+}
+
+@keyframes move {
+    0% {
+        left: 48rem;
+    }
+
+    100% {
+        left: -2rem;
+    }
+
+}
