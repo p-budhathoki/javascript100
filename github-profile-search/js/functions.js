@@ -19,15 +19,18 @@ export async function getUser(username) {
 export async function getRepo(username) {
   const response = await fetch(v.apiUrl + username + "/repos");
   const data = await response.json();
+  console.log(data);
+  displayRepos(data);
 }
 
+// Error Message Function
 export function errorMessage(msg) {
   v.profile.innerHTML = "";
   document.querySelector(".hide").style.display = "none";
   return (v.repos.innerHTML = `<p class = "alert alert-danger">${msg}</p>`);
 }
 
-export function displayData() {
+export function displayData(user) {
   const html = `
     <img src="${user.avatar_url}" 
         alt="${user.name}"
