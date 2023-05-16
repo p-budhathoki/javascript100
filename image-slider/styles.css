@@ -60,3 +60,68 @@ img {
 }
 
 /* ======================================================================= */
+.slider {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all .5s ease;
+}
+
+.slide img {
+    height: 100%;
+}
+
+.current {
+    opacity: 1;
+    transform: translateX(-0%);
+}
+
+.content {
+    position: absolute;
+    top: 7rem;
+    left: 5rem;
+    opacity: 0;
+    width: 55%;
+    padding: 3rem;
+    transform: translateX(3rem);
+}
+
+.current .content {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .5s ease;
+}
+.buttons button{
+    border: .2rem solid #000;
+    background-color: transparent;
+    color: var(--whitesmoke);
+    cursor: pointer;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 1.8rem
+}
+.buttons button:hover{
+    background-color: var(--whitesmoke);
+    color: #000;
+}
+.next{
+    top: 35%;
+    right: 1.5rem;
+}
+.prev{
+    top: 35%;
+    left: 1.5rem;
+}
