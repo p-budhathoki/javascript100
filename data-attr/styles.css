@@ -60,3 +60,15 @@ img {
 }
 
 /* ======================================================================= */
+.buttons {
+    text-align: center;
+    margin-top: 20rem;
+    /* padding: 0rem 2rem; */
+}
+
+.btn {
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 1rem;
+}
