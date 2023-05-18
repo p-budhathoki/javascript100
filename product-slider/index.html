@@ -20,31 +20,27 @@
   <body>
     <header>
       <div class="container">
-        <h1>Product Review</h1>
+        <h1>Product Slider</h1>
+      </div>
 
-        <!-- search box -->
-        <div class="search-box">
-          <form action="" onsubmit="return false">
-            <input type="text" id="search" placeholder="Search Products" />
-          </form>
-        </div>
-
-        <!-- buttons -->
-        <div class="filter-box">
-          <a href="#" class="btn active" data-filter="all">All</a>
-          <a href="#" class="btn" data-filter="watch">Watch</a>
-          <a href="#" class="btn" data-filter="shirt">Shirt</a>
-          <a href="#" class="btn" data-filter="gown">Gown</a>
-          <a href="#" class="btn" data-filter="jewelry">Jewelry</a>
-        </div>
+      <div class="buttons">
+        <button onclick="sw()">Scroll Width</button>
+        <button onclick="sl()">Scroll Length</button>
+        <button onclick="cw()">Client Width</button>
+        <button onclick="calc()">Calc(SW-CW)</button>
       </div>
     </header>
 
     <main>
-      <div class="main-container">
-        <section class="container" id="store-products">
+      <div class="slide-container">
+        <img
+          src="./images/arrow-left.png"
+          alt=""
+          id="slide-left"
+          class="arrow" />
+        <section class="container" id="slider">
           <!-- Single product - Watch -->
-          <div class="store-product watch">
+          <div class="thumbnail">
             <img src="./images/1.png" alt="" />
             <div class="product-details">
               <h2>Watch Product</h2>
@@ -53,7 +49,7 @@
             </div>
           </div>
           <!-- Single product - Watch -->
-          <div class="store-product watch">
+          <div class="thumbnail">
             <img src="./images/2.png" alt="" />
             <div class="product-details">
               <h2>Watch Product</h2>
@@ -62,8 +58,8 @@
             </div>
           </div>
           <!-- Single product - Watch -->
-          <div class="store-product watch">
-            <img src="./images/13.png" alt="" />
+          <div class="thumbnail">
+            <img src="./images/3.png" alt="" />
             <div class="product-details">
               <h2>Watch Product</h2>
               <p><span>$39.99</span> $29.99</p>
@@ -72,16 +68,7 @@
           </div>
 
           <!-- Single product - Shirt -->
-          <div class="store-product shirt">
-            <img src="./images/3.png" alt="" />
-            <div class="product-details">
-              <h2>Shirt Product</h2>
-              <p><span>$39.99</span> $29.99</p>
-              <a href="#">Add to Cart</a>
-            </div>
-          </div>
-          <!-- Single product - Shirt -->
-          <div class="store-product shirt">
+          <div class="thumbnail">
             <img src="./images/4.png" alt="" />
             <div class="product-details">
               <h2>Shirt Product</h2>
@@ -90,7 +77,7 @@
             </div>
           </div>
           <!-- Single product - Shirt -->
-          <div class="store-product shirt">
+          <div class="thumbnail">
             <img src="./images/5.png" alt="" />
             <div class="product-details">
               <h2>Shirt Product</h2>
@@ -98,9 +85,18 @@
               <a href="#">Add to Cart</a>
             </div>
           </div>
-          <!-- Single product - Gown -->
-          <div class="store-product gown">
+          <!-- Single product - Shirt -->
+          <div class="thumbnail">
             <img src="./images/6.png" alt="" />
+            <div class="product-details">
+              <h2>Shirt Product</h2>
+              <p><span>$39.99</span> $29.99</p>
+              <a href="#">Add to Cart</a>
+            </div>
+          </div>
+          <!-- Single product - Gown -->
+          <div class="thumbnail">
+            <img src="./images/7.png" alt="" />
             <div class="product-details">
               <h2>Gown Product</h2>
               <p><span>$39.99</span> $29.99</p>
@@ -108,16 +104,7 @@
             </div>
           </div>
           <!-- Single product - Shirt -->
-          <div class="store-product shirt">
-            <img src="./images/7.png" alt="" />
-            <div class="product-details">
-              <h2>Shirt Product</h2>
-              <p><span>$39.99</span> $29.99</p>
-              <a href="#">Add to Cart</a>
-            </div>
-          </div>
-          <!-- Single product - Shirt -->
-          <div class="store-product shirt">
+          <div class="thumbnail">
             <img src="./images/8.png" alt="" />
             <div class="product-details">
               <h2>Shirt Product</h2>
@@ -125,17 +112,17 @@
               <a href="#">Add to Cart</a>
             </div>
           </div>
-          <!-- Single product - Jewelry -->
-          <div class="store-product jewelry">
+          <!-- Single product - Shirt -->
+          <div class="thumbnail">
             <img src="./images/9.png" alt="" />
             <div class="product-details">
-              <h2>Jewelry Product</h2>
+              <h2>Shirt Product</h2>
               <p><span>$39.99</span> $29.99</p>
               <a href="#">Add to Cart</a>
             </div>
           </div>
-          <!-- Single product - jewelry -->
-          <div class="store-product jewelry">
+          <!-- Single product - Jewelry -->
+          <div class="thumbnail">
             <img src="./images/10.png" alt="" />
             <div class="product-details">
               <h2>Jewelry Product</h2>
@@ -144,7 +131,7 @@
             </div>
           </div>
           <!-- Single product - jewelry -->
-          <div class="store-product jewelry">
+          <div class="thumbnail">
             <img src="./images/11.png" alt="" />
             <div class="product-details">
               <h2>Jewelry Product</h2>
@@ -153,9 +140,11 @@
             </div>
           </div>
         </section>
-        <div class="container no-result">
-          <p>No more products found.</p>
-        </div>
+        <img
+          src="./images/arrow-right.png"
+          alt=""
+          id="slide-right"
+          class="arrow" />
       </div>
     </main>
     <script src="script.js"></script>
