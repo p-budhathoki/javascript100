@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>Count-Up</title>
 
     <!--==============================================================-->
     <!-- <link rel="stylesheet" href="../normalize.css" /> -->
@@ -12,12 +12,47 @@
     <script
       src="https://kit.fontawesome.com/1935d064dd.js"
       crossorigin="anonymous"></script>
+
     <!--==============================================================-->
 
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
+    <section class="top">
+      <div class="container top-content">
+        <h1>Welcome to Infinity...</h1>
+        <img src="./images/girl.svg" alt="" />
+        <p>
+          nobis temporibus odit magnam vitae voluptas libero itaque reiciendis
+          quasi tenetur ullam eius. Architecto reprehenderit dolores illo
+          voluptates possimus voluptatibus natus dolorem, itaque maiores
+          placeat, optio dolore illum! Quidem aut optio repellat id dicta,
+          ratione, harum sapiente odit nostrum recusandae et ullam!
+        </p>
+        <button class="btn">Get Started</button>
+      </div>
+    </section>
+
+    <section class="main">
+      <div class="container box">
+        <div class="counter-box">
+          <i class="fas fa-users-cog"></i>
+          <div class="counter" data-target="40">40</div>
+          <span>Our Team Members</span>
+        </div>
+        <div class="counter-box">
+          <i class="fas fa-users"></i>
+          <div class="counter" data-target="1000">40</div>
+          <span>Happy Customers</span>
+        </div>
+        <div class="counter-box">
+          <i class="fas fa-globe-africa"></i>
+          <div class="counter" data-target="14">40</div>
+          <span>Countries Reached</span>
+        </div>
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
