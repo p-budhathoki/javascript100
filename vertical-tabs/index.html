@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>Vertical Tabs</title>
 
     <!--==============================================================-->
     <!-- <link rel="stylesheet" href="../normalize.css" /> -->
@@ -12,12 +12,67 @@
     <script
       src="https://kit.fontawesome.com/1935d064dd.js"
       crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous" />
     <!--==============================================================-->
 
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
+    <div class="container">
+      <div class="text">
+        <h1>Vertical Tabs</h1>
+        <p>Click on the tab buttons to learn more</p>
+      </div>
+
+      <div class="tabs">
+        <div class="tab-links">
+          <button class="tab-link active" data-filter="about">
+            Who we are
+          </button>
+          <button class="tab-link" data-filter="services">What we do</button>
+          <button class="tab-link" data-filter="contact">Get in touch</button>
+        </div>
+
+        <!-- tab content -->
+        <div class="tab-contents">
+          <div class="tab-content about">
+            <h2>Who we are</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+              voluptates mollitia id soluta maxime. Minima minus expedita magni
+              ullam, nobis nemo numquam! Aliquam ipsam fuga laborum quos animi,
+              minus reiciendis!
+            </p>
+          </div>
+
+          <div class="tab-content services">
+            <h2>What we do</h2>
+            <p>
+              Quaerat debitis fugit recusandae. Similique iste fugiat
+              voluptatibus, neque velit ad itaque? Quo ex officiis amet commodi
+              deleniti quis iste, natus nulla blanditiis dolores sint cupiditate
+              animi ab quaerat aperiam debitis saepe.
+            </p>
+          </div>
+
+          <div class="tab-content contact">
+            <h2>Get in touch</h2>
+            <p>
+              Nisi impedit sit aut aliquid laboriosam perspiciatis reiciendis
+              iure cupiditate accusantium unde ex, voluptatibus obcaecati nobis
+              et cumque fuga asperiores placeat voluptatum labore enim
+              consequatur, fugiat quos! Soluta similique facilis repudiandae
+              fugit provident, hic
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

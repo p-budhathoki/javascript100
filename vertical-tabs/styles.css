@@ -60,3 +60,70 @@ img {
 }
 
 /* ======================================================================= */
+.text {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tabs {
+    display: flex;
+    border: .1rem solid var(--whitesmoke);
+    overflow: hidden;
+}
+
+.tab-links {
+    width: 35%;
+    z-index: 1;
+    margin: 1rem;
+}
+
+button.tab-link {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: none;
+    outline: none;
+    border-bottom: .2rem solid #000;
+
+}
+
+button.tab-link:last-child {
+    margin-bottom: 0rem;
+}
+
+.active {
+    background-color: red;
+    background-color: black;
+    color: var(--whitesmoke);
+}
+
+.tab-contents {
+    padding: 1rem;
+}
+
+.tab-content {
+    display: none;
+    animation: slide-right .5s ease 1;
+}
+
+.about {
+    display: block;
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-10rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .tab-links {
+        width: 50%;
+    }
+
+}
