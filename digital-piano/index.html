@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Piano</title>
+
+    <!--==============================================================-->
+    <!-- <link rel="stylesheet" href="../normalize.css" /> -->
+
+    <script
+      src="https://kit.fontawesome.com/1935d064dd.js"
+      crossorigin="anonymous"></script>
+    <!--==============================================================-->
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <section class="main">
+      <header>
+        <h1>Digital Piano</h1>
+        <p>Hover on the keys for more info.</p>
+      </header>
+
+      <div class="container">
+        <div class="key-pressed">C</div>
+
+        <div class="keys">
+          <!-- C -->
+          <div class="key" data-key="65" data-note="C">
+            <span class="hints">A</span>
+          </div>
+          <div class="key sharp" data-key="87" data-note="C#">
+            <span class="hints">W</span>
+          </div>
+          <!-- D -->
+          <div class="key" data-key="83" data-note="D">
+            <span class="hints">S</span>
+          </div>
+          <div class="key sharp" data-key="69" data-note="D#">
+            <span class="hints">E</span>
+          </div>
+          <!-- E -->
+          <div class="key" data-key="68" data-note="E">
+            <span class="hints">D</span>
+          </div>
+          <!-- F -->
+          <div class="key" data-key="70" data-note="F">
+            <span class="hints">F</span>
+          </div>
+          <div class="key sharp" data-key="84" data-note="F#">
+            <span class="hints">T</span>
+          </div>
+          <!-- G -->
+          <div class="key" data-key="71" data-note="G">
+            <span class="hints">G</span>
+          </div>
+          <div class="key sharp" data-key="89" data-note="G#">
+            <span class="hints">Y</span>
+          </div>
+          <!-- A -->
+          <div class="key" data-key="72" data-note="A">
+            <span class="hints">H</span>
+          </div>
+          <div class="key sharp" data-key="85" data-note="A#">
+            <span class="hints">U</span>
+          </div>
+          <!-- B -->
+          <div class="key" data-key="74" data-note="A">
+            <span class="hints">J</span>
+          </div>
+          <!-- C -->
+          <div class="key" data-key="75" data-note="C">
+            <span class="hints">K</span>
+          </div>
+          <div class="key sharp" data-key="79" data-note="C#">
+            <span class="hints">O</span>
+          </div>
+          <!-- D -->
+          <div class="key" data-key="76" data-note="D">
+            <span class="hints">L</span>
+          </div>
+          <div class="key sharp" data-key="80" data-note="D#">
+            <span class="hints">P</span>
+          </div>
+          <!-- E -->
+          <div class="key" data-key="186" data-note="E">
+            <span class="hints">;</span>
+          </div>
+        </div>
+        <audio src="audio/65.wav" data-key="65"></audio>
+        <audio src="audio/87.wav" data-key="87"></audio>
+        <audio src="audio/83.wav" data-key="83"></audio>
+        <audio src="audio/69.wav" data-key="69"></audio>
+        <audio src="audio/68.wav" data-key="68"></audio>
+        <audio src="audio/70.wav" data-key="70"></audio>
+        <audio src="audio/84.wav" data-key="84"></audio>
+        <audio src="audio/71.wav" data-key="71"></audio>
+        <audio src="audio/89.wav" data-key="89"></audio>
+        <audio src="audio/72.wav" data-key="72"></audio>
+        <audio src="audio/85.wav" data-key="85"></audio>
+        <audio src="audio/74.wav" data-key="74"></audio>
+        <audio src="audio/75.wav" data-key="75"></audio>
+        <audio src="audio/79.wav" data-key="79"></audio>
+        <audio src="audio/76.wav" data-key="76"></audio>
+        <audio src="audio/80.wav" data-key="80"></audio>
+        <audio src="audio/186.wav" data-key="186"></audio>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

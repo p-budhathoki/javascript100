@@ -1,0 +1,170 @@
+/* ======================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 62.5% of 16px = 10px */
+    /* set 1rem = 10px using 62.5% of 16px 
+    1rem = 10px
+    1.5rem = 15px
+    3rem = 30px
+    6rem = 60px
+    .1rem = 1px
+     */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+/* ======================================================================= */
+
+/* ====================JAVASCRIPT PROJECT STYLES========================== */
+:root {
+    --white: #fff;
+    --whitesmoke: #f5f5f5;
+    --black: #1c2b2d;
+    --blue: #31326f;
+    --light-blue: #005490;
+    --color-primary: #9d0191;
+    --color-sec: #db6400;
+    --grey: #eee;
+    --dark-grey: #222831;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ======================================================================= */
+section.main {
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgba(0,0,0,.5); */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-top: 6rem;
+}
+
+header p {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.key-pressed {
+    font-size: 12rem;
+    margin: 3rem 0;
+}
+
+.keys {
+    width: 100%;
+    height: 35rem;
+    max-width: 88rem;
+    position: relative;
+    margin: 4rem auto;
+    border: 1px solid black;
+    /*  */
+}
+
+.key {
+    position: relative;
+    border: .4rem solid #000;
+    border-radius: 0.5rem;
+    transition: all .07s ease;
+    z-index: 2;
+}
+
+.key:not(.sharp) {
+    float: left;
+    width: 10%;
+    height: 100%;
+    background-color: var(--whitesmoke);
+    color: #000;
+}
+
+.key.sharp {
+    position: absolute;
+    top: 0;
+    width: 6%;
+    height: 60%;
+    background-color: black;
+    z-index: 3;
+
+}
+
+.key[data-key="87"] {
+    left: 7%;
+}
+
+.key[data-key="69"] {
+    left: 17%;
+}
+
+.key[data-key="84"] {
+    left: 37%;
+}
+
+.key[data-key="89"] {
+    left: 47%;
+}
+
+.key[data-key="85"] {
+    left: 57%;
+}
+
+.key[data-key="79"] {
+    left: 77%;
+}
+
+.key[data-key="80"] {
+    left: 87%;
+}
+
+.playing {
+    transform: scale(.9);
+    border-color: red;
+    /* border-color: black;
+    border: .4rem solid #000; */
+}
+
+.hints {
+    display: block;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    bottom: 0.7rem;
+    transition: all .3s ease;
+    font-size: 2rem;
+}
+
+.keys:hover .hints {
+    opacity: 1;
+}
