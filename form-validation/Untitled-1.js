@@ -1,23 +1,21 @@
-const form = document.getElementById("form");
-const username = document.getElementById("username");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const password2 = document.getElementById("password2");
+const form = document.getElementById("form"),
+  username = document.getElementById("username"),
+  email = document.getElementById("email"),
+  password = document.getElementById("password"),
+  password2 = document.getElementById("password2");
 
+//   Form Event Listener
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // check if the inputs are entered
   checkRequired([username, email, password, password2]);
-
-  // Check the length of the input fields
   checkLength(username, 5, 16);
   checkLength(password, 8, 16);
   checkEmail(email);
   matchPassword(password, password2);
 });
 
-// Check required fields
+//   Check Required Fields
 function checkRequired(inputAll) {
   inputAll.forEach((input) => {
     if (input.value.trim() === "") {
@@ -28,7 +26,7 @@ function checkRequired(inputAll) {
   });
 }
 
-// Check input length
+// Check Input Length
 function checkLength(input, min, max) {
   if (input.value.length < min) {
     showError(
@@ -45,11 +43,10 @@ function checkLength(input, min, max) {
   }
 }
 
-// Validate email
+// Validate Email
 function checkEmail(input) {
   const re =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
   if (re.test(input.value.trim())) {
     showSuccess(input);
   } else {
@@ -57,22 +54,11 @@ function checkEmail(input) {
   }
 }
 
-// check password match
+// Check Password
 function matchPassword(input1, input2) {
   if (input1.value !== input2.value) {
     showError(input2, "Passwords do not match");
   }
-}
-
-// Show Error Message
-function showError(input, message) {
-  // get parent element
-  const formControl = input.parentElement;
-  // apply form-control, error class
-  formControl.className = "form-control error";
-  // select small element and show error message
-  const small = formControl.querySelector("small");
-  small.innerText = message;
 }
 
 // Show Error Message
@@ -89,7 +75,7 @@ function showSuccess(input) {
   formControl.className = "form-control success";
 }
 
-// get field name
+// Get Field Name
 function getFieldName(input) {
   return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
