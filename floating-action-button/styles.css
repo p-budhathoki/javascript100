@@ -60,3 +60,62 @@ img {
 }
 
 /* ======================================================================= */
+section.main {
+    width: 100%;
+    height: 100vh;
+
+}
+
+.fab-btn {
+    position: absolute;
+    right: 3rem;
+    bottom: 1.5rem;
+    width: 5.5rem;
+    height: 5.5rem;
+    background-color: rgba(0, 0, 0, .8);
+    color: var(--whitesmoke);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+    box-shadow: 0 .3rem 1rem rgba(0, 0, 0, .8);
+    transition: all .3s;
+}
+
+.fab-btn i {
+    transition: all .3s;
+}
+
+.fab-btns .fab-btn {
+    width: 4rem;
+    height: 4rem;
+    right: 3.8rem;
+    bottom: 2.3rem;
+    font-size: 1.5rem;
+}
+
+.fab-btns.show .fab-btn:nth-child(1) {
+    bottom: 8rem;
+    background: #3b5999;
+}
+
+.fab-btns.show .fab-btn:nth-child(2) {
+    bottom: 13rem;
+    background: #55acee;
+}
+
+.fab-btns.show .fab-btn:nth-child(3) {
+    bottom: 18rem;
+    background: #25d366;
+}
+
+.fab-btns.show .fab-btn:nth-child(4) {
+    bottom: 23rem;
+    background: var(--color-primary);
+}
+
+.fab-btns.show + .fab-btn i {
+    transform: rotate(135deg);
+}
