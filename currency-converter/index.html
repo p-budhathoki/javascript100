@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>Currency Converter</title>
 
     <!--==============================================================-->
     <!-- <link rel="stylesheet" href="../normalize.css" /> -->
@@ -18,6 +18,65 @@
   </head>
 
   <body>
+    <section class="main">
+      <h1>Currency Converter</h1>
+      <div class="container box">
+        <div class="converter">
+          <!-- Base Conversion -->
+          <div class="base-convert">
+            <p>Exchange Rate</p>
+            <span class="base">1 USD = 300 GBP</span>
+          </div>
+
+          <!-- Text From and To -->
+          <div class="text">
+            <p>From</p>
+            <p>To</p>
+          </div>
+
+          <!-- Main Conversion -->
+          <div class="main-convert">
+            <!-- From -->
+            <div class="cur-box">
+              <div class="currency from">
+                <img
+                  src="https://www.worldometers.info/img/flags/us-flag.gif"
+                  alt="" />
+                <select name="" id="" class="cur-1">
+                  <option value="AED">AED</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                  <option value="USD" selected>USD</option>
+                </select>
+              </div>
+              <input type="text" class="cur-1-input" placeholder="0" />
+            </div>
+
+            <!-- Switch Button -->
+            <div class="switch-cur">
+              <div class="fas fa-exchange-alt"></div>
+            </div>
+
+            <!-- To -->
+            <div class="cur-box">
+              <div class="currency to">
+                <img
+                  src="https://www.worldometers.info/img/flags/uk-flag.gif"
+                  alt="" />
+                <select name="" id="" class="cur-2">
+                  <option value="AED">AUD</option>
+                  <option value="AED">AED</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP" selected>GBP</option>
+                  <option value="USD">USD</option>
+                </select>
+              </div>
+              <input type="text" class="cur-2-input" placeholder="0.00" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
