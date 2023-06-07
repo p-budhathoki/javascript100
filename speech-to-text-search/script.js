@@ -33,7 +33,7 @@ if (speechRecognition) {
     micBtn.classList.remove("fa-microphone");
     micBtn.classList.add("fa-microphone-slash");
     //   add text Recording...
-    instruction.textContent = "Recording...";
+    instruction.textContent = "Recording... Press Ctrl + m to stop.";
     searchInput.focus();
     console.log("Speech Recognition Enabled");
   });
@@ -44,7 +44,7 @@ if (speechRecognition) {
     micBtn.classList.remove("fa-microphone-slash");
     micBtn.classList.add("fa-microphone");
     //   add text Click the Mic button to start
-    instruction.textContent = "Click the Mic button to start";
+    instruction.textContent = "Press Ctrl + x or Click the Mic icon to start";
     searchInput.focus();
     console.log("Speech Recognition Disabled");
   });
@@ -57,9 +57,29 @@ if (speechRecognition) {
     const current = e.resultIndex;
     const transcript = e.results[current][0].transcript;
 
-    content = transcript;
-    searchInput.value = content;
-    searchInput.focus();
+    if (transcript.toLowerCase().trim() === "stop recording") {
+      recognition.stop();
+    } else if (!searchInput.value) {
+      searchInput.value = transcript;
+    } else {
+      if (transcript.toLowerCase().trim() === "search") {
+        searchForm.submit();
+      } else if (transcript.toLowerCase().trim() === "reset form") {
+        searchInput.value = "";
+      } else {
+        searchInput.value = transcript;
+      }
+    }
+  });
+
+  // Add keyboard Event Listener
+  document.addEventListener("keydown", (e) => {
+    if (e.ctrlKey && e.key === "x") {
+      recognition.start();
+    }
+    if (e.ctrlKey && e.key === "m") {
+      recognition.stop();
+    }
   });
 } else {
   console.log("Speech Recognition is not supported");
