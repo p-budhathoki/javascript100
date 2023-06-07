@@ -154,13 +154,15 @@ img {
     font-size: 3rem;
     color: #721c24;
 }
-.msg{
+
+.msg {
     /* position: absolute; */
     padding: 0rem 2rem;
     font-size: 1.8rem;
     color: #721c24;
 }
-.close-btn{
+
+.close-btn {
     position: absolute;
     right: 0;
     top: 0;
@@ -169,11 +171,29 @@ img {
     padding: 2rem 1.8rem;
     cursor: pointer;
 }
-.close-btn:hover{
+
+.close-btn:hover {
     background-color: #f3a1a7;
 
 }
-.close-btn .fas{
+
+.close-btn .fas {
     color: #721c24;
     font-size: 2rem;
+}
+
+/* Add progress bar to the project */
+.progress-bar {
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.progress {
+    width: 0%;
+    height: .3rem;
+    line-height: 0.3rem;
+    background-color: green;
 }
