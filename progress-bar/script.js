@@ -6,7 +6,7 @@ function start() {
   const timeInterval = setInterval(fill, 20);
 
   function fill() {
-    if (width >= 50) {
+    if (width >= 99) {
       clearInterval(timeInterval);
     } else {
       // increase width, display width inside progress
