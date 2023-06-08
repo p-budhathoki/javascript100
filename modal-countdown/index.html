@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>Modal Countdown</title>
 
     <!--==============================================================-->
     <!-- <link rel="stylesheet" href="../normalize.css" /> -->
@@ -18,6 +18,30 @@
   </head>
 
   <body>
+    <header>
+      <h1>Lets <span>Minify</span> !</h1>
+      <p>Paste your URL below and Click the button</p>
+    </header>
+    <section>
+      <div class="container">
+        <form action="">
+          <input type="text" id="link" placeholder="https://example.com" />
+          <button id="btn">test popup</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2023 <a href="#">Infinity & Beyond...</a></p>
+    </footer>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Your download will begin in...</p>
+        <progress value="0" max="10" id="pbar" class="progress"></progress>
+        <p id="counting">10</p>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
