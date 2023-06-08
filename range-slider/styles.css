@@ -60,3 +60,102 @@ img {
 }
 
 /* ======================================================================= */
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.box {
+    min-width: 40rem;
+    margin: 2rem 0;
+    border: 1px solid red;
+}
+
+.range-slider {
+    width: 100%;
+    height: 9rem;
+    border-radius: 0.5rem;
+    padding: 3rem 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid royalblue; */
+}
+
+.value {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    /* border: 1px solid blue; */
+    background-color: green;
+    padding: 0.1rem 1rem;
+    border-radius: 0.3rem;
+}
+
+.circle-range {
+    width: 100%;
+    height: 3rem;
+    --webkit-appearance: none;
+    --moz-appearance: none;
+    --webkit-appearance: none;
+    --moz-appearance: none;
+    background: #0ff649;
+    /* background: rgb(154, 149, 149); */
+    outline: none;
+    /* border: 1px solid yellow; */
+}
+
+.circle-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: orangered;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.circle-range::-moz-slider-thumb {
+    --webkit-appearance: none;
+    background: orangered;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+/* .circle-range {
+    width: 100%;
+    height: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: var(--color-sec);
+    outline: none;
+  }
+
+.circle-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: var(--color-primary);
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+  }
+  
+  .circle-range::-moz-slider-thumb {
+    --webkit-appearance: none;
+    background: var(--color-primary);
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+  } */
