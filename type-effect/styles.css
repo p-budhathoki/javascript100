@@ -159,3 +159,42 @@ span {
     color: var(--whitesmoke);
     border: .1rem solid whitesmoke;
 }
+
+/* Preloader */
+.preloader {
+    height: 100%;
+    width: 100%;
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+}
+
+.spinner {
+    width: 6rem;
+    height: 6rem;
+    border: .3rem solid whitesmoke;
+    border-top: .3rem solid green;
+    border-right: .3rem solid green;
+    border-bottom: .3rem solid green;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* transform: translate(-50%, -50%); */
+    animation: rotate 1s infinite ease-in-out;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+.youtube{
+    display: flex;
+    justify-content: center;
+}

@@ -65,3 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // const word = "Developer";
 // const result = word.substring(0, 3);
 // console.log(result);
+
+// preloader
+const preloader = document.querySelector(".preloader");
+
+window.addEventListener("load", () => {
+  preloader.style.display = "none";
+})
