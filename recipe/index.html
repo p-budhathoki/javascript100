@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>Recipe</title>
 
     <!--==============================================================-->
     <!-- <link rel="stylesheet" href="../normalize.css" /> -->
@@ -18,6 +18,74 @@
   </head>
 
   <body>
+    <header>
+      <div class="meal-search container">
+        <h2>What would you <span>like to cook?</span></h2>
+        <div class="search-box">
+          <!-- select form for js -->
+          <form action="" onsubmit="return false">
+            <input type="text" id="search" placeholder="Search..." />
+            <button type="submit" class="btn search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <!-- form selection for js ends -->
+        </div>
+      </div>
+    </header>
+
+    <section class="container">
+      <div class="meal-result">
+        <!-- select meal for js -->
+        <div class="meals" id="meal">
+          <!-- Single Meal Item -->
+          <!-- <div class="meal">
+            <div class="meal-img">
+              <img src="./images/food.jpg" alt="" />
+            </div>
+            <div class="meal-name">
+              <h3>Potato Chips</h3>
+              <a href="#" class="recipe-btn">View Recipe &rarr;</a>
+            </div>
+          </div> -->
+          <!-- Single Meal Item End -->
+        </div>
+        <!-- select meal for js ends -->
+      </div>
+
+      <!-- Meal Modal -->
+      <div class="meal-modal">
+        <div class="meal-details">
+          <button class="btn close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+
+          <!-- Meal Content -->
+           <div class="recipe-content">
+           <!-- <div class="recipe-img">
+              <img src="./images/food.jpg" alt="" />
+            </div>
+            <h2 class="recipe-title">Meal Name Here</h2>
+
+            <div class="recipe-instruction">
+              <h3>Instruction</h3>
+              <p>
+                amet consectetur adipisicing elit. Incidunt distinctio culpa
+                inventore tempora, repellat exercitationem consectetur labore
+                eaque animi fuga illo corrupti temporibus accusantium et atque
+                id. Fugit corporis suscipit accusantium natus quos blanditiis,
+                perspiciatis eum a enim commodi aliquam! Aspernatur et at
+                eveniet optio explicabo eum quibusdam quam qui, aut ad
+                asperiores nostrum voluptas ipsam porro repellendus sunt! Porro.
+              </p>
+            </div>
+            <div class="recipe-link">
+              <a href="#" target="_blank">Watch Video</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
