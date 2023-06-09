@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>Card Payment</title>
 
     <!--==============================================================-->
     <!-- <link rel="stylesheet" href="../normalize.css" /> -->
@@ -18,6 +18,64 @@
   </head>
 
   <body>
+    <section class="main">
+      <div class="container box">
+        <div class="payment">
+          <!-- header -->
+          <div class="header">
+            <h1 class="logo">Pay</h1>
+            <p>Infinity&Beyond</p>
+          </div>
+
+          <!-- Content -->
+          <div class="content">
+            <div class="amount">
+              <p>AUD <span>100.00</span></p>
+              <span>example.example.com</span>
+            </div>
+            <form action="" autocomplete="off">
+              <div class="card-details">
+                <!-- Number -->
+                <div class="number">
+                  <label for="">Card Number</label>
+                  <input
+                    type="text"
+                    id="number"
+                    placeholder="0000 0000 0000 0000" />
+                  <img src="./images/credit-card.png" alt="" />
+                </div>
+                <!-- Valid -->
+                <div class="valid">
+                  <label for="">Valid Till</label>
+                  <input type="text" id="valid" placeholder="MM / YY" />
+                </div>
+                <!-- ccv -->
+                <div class="ccv">
+                  <label for="">CCV</label>
+                  <input type="text" id="ccv" placeholder="123" />
+                  <span>What is this?</span>
+                </div>
+              </div>
+              <!-- Remember Card -->
+              <div class="remember">
+                <input type="checkbox" id="check" />
+                <label for="check">Remember this card next time</label>
+              </div>
+              <!-- Button -->
+              <div class="button">
+                <button class="btn">Pay $100.00</button>
+                <i class="fas fa-angle-right"></i>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Secured by -->
+        <div class="secure">
+          <i class="fas fa-lock"></i>
+          <span>Secured by Wolf Security</span>
+        </div>
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
