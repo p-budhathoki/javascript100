@@ -60,3 +60,97 @@ img {
 }
 
 /* ======================================================================= */
+body {
+    background: var(--dark-grey);
+
+}
+
+.header {
+    margin: 2rem 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    margin: 2rem;
+    margin-top: 7rem;
+}
+
+h1 span {
+    /* color: darkblue; */
+    color: tomato;
+}
+
+.gallery-filter {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    transition: all .3s;
+
+}
+
+.gallery-filter span {
+    margin-right: 1rem;
+}
+
+.gallery-filter .active {
+    color: orangered;
+    font-weight: 700;
+    padding-bottom: .3rem;
+    border-bottom: .2rem solid rgba(255, 255, 255, 0.9);
+}
+
+.gallery-filter>* {
+    margin: 0rem 0.3rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 1rem;
+}
+
+.gallery .image {
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 0.3rem;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: all .5s;
+    animation: grow .5s ease-in-out;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.gallery .image:hover::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    background: #000;
+    opacity: 0.2;
+}
+.gallery .image:hover::after {
+    font-family: "Font Awesome 5 Free", "Helvetica Neue", sans-serif;
+    font-weight: 900;
+    content: "\f00e";
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-sec);
+}
