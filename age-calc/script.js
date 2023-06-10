@@ -25,6 +25,10 @@ function calculateAge(e) {
   let currentMonth = today.getMonth() + 1;
   let currentDate = today.getDate();
 
+    // throw error when
+    // current year is lower than the birth year of the user or 
+    // when birth month is greater than the current month and birth year is equal to current year or 
+    // birth date is greater than current date and birth month is equal to current month and birth year is equal to the current year
   if (
     birthDetails.year > currentYear ||
     (birthDetails.month > currentMonth && birthDetails.year == currentYear) ||
