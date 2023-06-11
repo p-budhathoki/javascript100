@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>Multi Step Form</title>
 
     <!--==============================================================-->
     <!-- <link rel="stylesheet" href="../normalize.css" /> -->
@@ -12,12 +12,77 @@
     <script
       src="https://kit.fontawesome.com/1935d064dd.js"
       crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous" />
     <!--==============================================================-->
 
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
+    <div class="container">
+      <div class="row box">
+        <div class="col-md-6">
+          <div class="form-container">
+            <div class="text-center">
+              <h2>Multi Step Form</h2>
+              <span>Fill the form fields below : </span>
+            </div>
+
+            <form action="" onsubmit="return false" autocomplete="off">
+              <div class="steps">
+                <p class="step">1</p>
+                <p class="step">2</p>
+                <p class="step">3</p>
+                <p class="step">4</p>
+              </div>
+              <div class="form-item">
+                <label for="fname" class="form-label">First Name : </label>
+                <input
+                  type="text"
+                  id="fname"
+                  class="form-control"
+                  placeholder="John" />
+                <label for="lname" class="form-label">Last Name :</label>
+                <input
+                  placeholder="Doe"
+                  type="text"
+                  id="lname"
+                  class="form-control" />
+              </div>
+              <div class="form-item">
+                <label for="age" class="form-label">Age : </label>
+                <input type="number" id="age" class="form-control" />
+                <label for="gender" class="form-label">Gender :</label> 
+                <input type="text" id="gender" class="form-control" />
+              </div>
+              <div class="form-item">
+                <label for="education" class="form-label">Education : </label>
+                <input type="text" id="education" class="form-control" />
+                <label for="address" class="form-label">Address : </label>
+                <input type="text" id="address" class="form-control" />
+              </div>
+              <div class="form-item">
+                <label for="email" class="form-label">Email : </label>
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="example@example.com" />
+                <label for="password" class="form-label">Password : </label> 
+                <input type="password" id="password" class="form-control" />
+              </div>
+              <button class="btn btn-primary btn-lg">Previous</button>
+              <button class="btn btn-primary btn-lg">Next</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
+    <!-- <script src="script1.js"></script> -->
   </body>
 </html>
