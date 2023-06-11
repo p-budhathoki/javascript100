@@ -60,3 +60,193 @@ img {
 }
 
 /* ======================================================================= */
+.main {
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.title {
+    margin-bottom: 4rem;
+    display: block;
+}
+
+.title h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check>* {
+    margin: 0rem 0.3rem;
+}
+
+/* custom check box */
+.switch {
+    display: inline-block;
+    height: 3rem;
+    position: relative;
+    width: 6rem;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .1);
+    cursor: pointer;
+    transition: all .4s;
+    border: 1px solid black;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    bottom: 0.2rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    background: rgba(255, 255, 255, .7);
+    transition: all .4s;
+}
+
+input:checked+.slider {
+    background: #4edf55;
+}
+
+input:checked+.slider::before {
+    /* background: #4edf55; */
+    transform: translateX(2.6rem);
+}
+
+.slider.round {
+    border-radius: 3.4rem;
+}
+
+.slider.round::before {
+    border-radius: 50%;
+}
+
+.price {
+    width: 100%;
+    margin: 0rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+
+}
+
+.price-box {
+    width: 40rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, .1);
+    padding-bottom: 3rem;
+    margin: 2rem 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+    border-radius: 0.3rem;
+
+}
+
+.price-box p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.price-box h4 span {
+    font-size: 1.6rem;
+    vertical-align: middle;
+}
+
+.price-box h4 span:nth-child(2) {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.price-box ul {
+    list-style-type: none;
+    margin-bottom: 3rem;
+}
+
+.price-box ul li {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: 1.2rem 0;
+    /* border-top: 1px solid #000; */
+    border-top: 1px solid springgreen;
+}
+
+.price-box ul li:last-child {
+    /* border-bottom: 1px solid red; */
+    border-bottom: 1px solid midnightblue;
+    border-bottom: 1px solid yellowgreen;
+}
+
+.price-box a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    background-color: var(--color-sec);
+    padding: 1.2rem 3rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.3rem;
+    color: var(--whitesmoke);
+    transition: all .3s;
+}
+
+.price-box a:hover {
+    font-size: 1.5rem;
+}
+
+.box {
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+    color: #000;
+}
+
+.box1, .btn1 {
+    background: linear-gradient(to right bottom, rgba(95, 201, 52, 1), rgba(39, 120, 7, 1));
+}
+
+.box2, .btn2 {
+    background: linear-gradient(to right bottom, rgba(238, 142, 33, 1), rgba(104, 50, 5, 1));
+}
+
+.box3, .btn3 {
+    background: linear-gradient(to right bottom, rgba(234, 67, 187, 1), rgba(80, 3, 71, 1));
+}
+
+.price-box:nth-child(2) {
+    transform: scale(1.15);
+}
+
+@media screen and (max-width:800px) {
+    .price {
+        flex-direction: column;
+    }
+
+    .price-box {
+        width: 35rem;
+    }
+
+    .price-box:nth-child(2) {
+        transform: scale(1);
+    }
+}
