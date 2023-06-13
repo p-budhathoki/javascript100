@@ -60,3 +60,71 @@ img {
 }
 
 /* ======================================================================= */
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid whitesmoke;
+}
+
+.box {
+    width: 45rem;
+    text-align: center;
+    /* border-right: 1px solid red; */
+    padding: 0rem;
+
+}
+
+
+.time {
+    width: 45rem;
+    font-size: 4rem;
+    background-color: rgba(255, 255, 255, .1);
+    background-color: #2b2b2b;
+    padding: 4rem 0.5rem;
+    border-radius: 0.3rem;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: lightgreen;
+    border: 1px solid aqua;
+
+}
+
+button {
+    padding: 1rem 2rem;
+    border: 1px solid black;
+    outline: none;
+    margin: 1.5rem;
+    cursor: pointer;
+    color: whitesmoke;
+    color: #000;
+    font-size: 1.6rem;
+    border-radius: 0.3rem;
+    transition: all .3s;
+}
+
+.fas {
+    margin-right: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.start {
+    background-color: forestgreen;
+    
+
+}
+
+.pause {
+    background-color: coral;
+}
+
+.reset {
+    background-color: firebrick;
+}
+
+.start:hover, .pause:hover, .reset:hover {
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+   
+}
