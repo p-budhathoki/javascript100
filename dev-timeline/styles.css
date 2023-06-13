@@ -60,3 +60,166 @@ img {
 }
 
 /* ======================================================================= */
+
+.intro {
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 120rem;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+}
+
+.timeline {
+    width: 100%;
+    overflow: hidden;
+}
+
+.timeline ul {
+    background-color: rgba(0, 0, 0, .5);
+    padding: 5rem 0;
+}
+
+/* line */
+.timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 0.6rem;
+    margin: 0 auto;
+    padding-top: 5rem;
+    background: rgba(0, 0, 0, .2);
+    background: springgreen;
+    /* margin-bottom: 3rem; */
+}
+
+.timeline ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: inherit;
+    background: limegreen;
+}
+
+/* Content box */
+.timeline ul li div {
+    width: 40rem;
+    font-size: 1.6rem;
+    position: relative;
+    bottom: 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0rem .2rem 1rem rgba(255, 255, 255, 0.5);
+}
+
+/* triangle */
+.timeline ul li div::before {
+    content: "";
+    position: absolute;
+    bottom: 0.7rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+    left: 4.5rem;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+    left: -1.5rem;
+    border-width: .8rem 1.6rem .8rem 0;
+    border-color: transparent seagreen transparent transparent;
+
+}
+
+.timeline ul li:nth-child(even) div {
+    left: -44rem;
+}
+
+.timeline ul li:nth-child(even) div::before {
+    right: -1.5rem;
+    border-width: .8rem 0 .8rem 1.6rem;
+    border-color: transparent transparent transparent orangered;
+
+}
+
+time {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.timeline ul li::after {
+    transition: all .5s ease-in-out;
+}
+
+/* .slide-in in javascript */
+.timeline ul li.slide-in:after {
+    background: paleturquoise;
+    border-right: .3rem solid olivedrab;
+}
+
+/* hide timeline box initially */
+.timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+    transform: translateX(20rem);
+}
+
+.timeline ul li:nth-child(even) div {
+    transform: translateX(-20rem);
+}
+
+/* .slide-in in javascript */
+.timeline ul li.slide-in div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+    .timeline ul li div {
+        width: 25rem;
+    }
+
+    .timeline ul li:nth-child(even) div {
+        left: -289px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .timeline ul li {
+        margin-left: 2rem;
+    }
+
+    .timeline ul li div {
+        width: calc(100vw - 91px);
+    }
+
+    .timeline ul li:nth-child(even) div {
+        left: 45px;
+    }
+
+    .timeline ul li:nth-child(even) div:before {
+        left: -15px;
+        border-width: .8rem 1rem .8rem 0;
+        background-color: transparent seagreen transparent transparent;
+    }
+
+}
