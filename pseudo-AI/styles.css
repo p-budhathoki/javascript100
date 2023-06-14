@@ -60,3 +60,40 @@ img {
 }
 
 /* ======================================================================= */
+/* .fa-eye{
+    font-size: 20rem;
+    color: #000;
+} */
+.box {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #000; */
+
+}
+.creator-bg{
+    background: rgba(255,255,255,.25);
+    /* border: none; */
+    border-radius: 0.5rem;
+
+}
+
+.creator {
+    width: 10rem;
+    height: 10rem;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+.anita-bg{
+    background: rgba(255,255,255,.25);
+    border-radius: 0.5rem;
+}
+
+.anita {
+
+    border: .2rem solid var(--black);
+}
